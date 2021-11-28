@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            To Do List
+        </title>
+    </head>
+    <body>
+        <script>
+            var todo=["get up","Study","workout","Programming"];
+            var add_new=prompt("enter new item");
+            var done=prompt("enter index to mark as done");
+            var replace=prompt("enter index place to replace word");
+
+            function show_list(){
+                for (var i=0; i< todo.length; i=i+1){
+                    console.log(todo[i]);
+                }
+            }
+
+            function add_todo_item(){
+                todo.push(add_new);
+                console.log(todo);
+            }
+
+            function add_done(){
+                for (i=0; i<=todo.length; i=i+1){
+                    todo=todo[i]+" "
+                }
+
+            }
+
+            function mark_done(){
+                var ticks = todo[done] + " √ ";
+                console.log(ticks);
+            }
+
+            function updating_element(){
+                var correct_word= prompt("enter the correct word");
+                todo[replace]=correct_word;
+                console.log(todo);
+            }
+
+            function deleting(){
+                var m=prompt("enter index of which element should be removed");
+                todo.splice(m, 1);
+                console.log(todo);
+            }
+
+
+
+            var show_list=show_list();
+            var add_new=add_todo_item();
+            var mark_done=mark_done();
+            var updating_element=updating_element();
+            var deleting=deleting();
+        </script>
+    </body>
+</html>
